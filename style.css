@@ -1,0 +1,532 @@
+body{
+    margin: 0px;
+    display: flex;
+    box-sizing: border-box;
+    border: 3px solid black;
+
+}
+/*----------------------------------------------SECCION HEADER---------------------------*/
+
+.contenedor-img{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.contenedor-header{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(236, 163, 117) ;
+    border: 3px solid black;
+}
+
+.h1-section{
+    width: 400px;
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+    font-family: "Freckle Face", serif;
+    font-size: 38px;
+    border: 3px solid black;
+}
+
+nav{
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", serif;
+    font-size: 12px;
+    border: 3px solid black;
+}
+
+.boton-nav-1 {
+    width: 120px;
+    height: 30px;
+    margin: 3px 10px; 
+    text-align: center;
+}
+
+.boton-nav-2 {
+    width: 120px;
+    height: 30px;
+    margin: 3px 10px; 
+    text-align: center;
+}
+
+.boton-nav-3 {
+    width: 120px;
+    height: 30px;
+    margin: 3px 10px; 
+    text-align: center;
+}
+.titulo-botonimg{
+    display: inline;
+    margin: 0 5px;
+}
+
+/*------------------------------------------SECCION MAIN-----------------------------------*/
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: rgba(180, 216, 49, 0.712);
+
+}
+.contenedor-seccion{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.contenedor-textos{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Orbitron", serif;
+    font-size: 25px;
+    border: 3px black solid;
+}
+
+.contenedor-medio{
+    width: 100%;
+    height: 90%;
+    background-color: black;
+}
+
+.boton-descarga{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    background-color:rgb(236, 163, 117) ;
+    border-radius: 6px;
+    border: none;
+    color: black;
+    font-family: "Orbitron", serif;
+}
+
+.boton-descarga:hover{
+    cursor: pointer;
+    background-color: rgba(0, 170, 0, 0.507);
+}
+
+/*------------------------------------------------------- ASIDE----------------------------------------*/
+
+.aside-contenedor{
+    width: 300px;
+    height: 660px;
+    border: 3px solid black;
+    background-color: rgba(236, 163, 117);
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+} 
+
+.seccion-imagen{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;  
+}
+
+.h1-aside{
+    margin: 5px;
+    font-family: "Freckle Face", serif;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.div-url{
+    width: 96%;
+    height: 50px;
+    font-family: "Orbitron", serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px solid black;
+    margin: 10px;
+}
+
+
+.div-color-fondo{
+    width: 96%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid black;
+}
+
+#label-fondo{
+    font-family: "Orbitron", serif;
+    font-size: 14px;
+    width: 100%;
+}
+.input-color-fondo{
+    width: 30%;
+}
+.select-fondo{
+    width: 60%;
+}
+
+
+.contenedor-filtros{
+    width: 96%;
+    margin: 4px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    font-family:"Orbitron", serif; 
+    font-size: 14px;
+}
+
+.label-range{
+    margin: 3px;
+}
+
+.boton-restablecer{
+    width: 140px;
+    font-family: "Orbitron", serif;
+    font-size: 12px;
+    background-color: rgba(180, 216, 49, 0.712);
+    border-radius: 6px;
+    border: none;
+    margin-top: 8px;
+}
+
+.boton-restablecer:hover{
+    cursor: pointer;
+    background-color:rgb(0, 170, 0);
+    color: white;
+}
+
+/* -----------------------------------SECCION TEXTO ------------------------ */
+
+.seccion-texto{
+        width: 300px;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3px;
+        border: 3px solid black;
+        background-color:rgba(236, 163, 117);
+} 
+
+.h1-texto{
+    margin: 5px;
+    font-family: "Freckle Face", serif;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.div-toptext{
+    border: 3px solid black;
+    width: 96%;
+    height: 90px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+}
+
+.p-superior{
+    margin: 3px;
+}
+
+.textarea{
+    width: 90%;
+    height: 27px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+}
+
+#check-texto{
+    width: 15px;
+    height: 15px;
+    margin: 0px 15px;
+} 
+
+.div-fuente{
+    border: 3px solid black;
+    width: 96%;
+    height: 96px;
+    margin: 3px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+}
+
+
+.parrafo-fuente-titulo{
+    margin: 6px;
+}
+
+.clases-fuente{
+    width: 90%;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.tamaño-fuente{
+    width: 40%;
+    margin: 3px 10px;
+}
+
+#iconos-fuente{
+    width: 15px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.contenedor-color{
+    border: 3px solid black;
+    width: 96%;
+    height: 100px;
+    margin: 3px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.div-colores{
+    border: 3px solid black;
+    width: 42%;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.parrafo-color-titulo{
+    margin: 5px;
+}
+
+#input-color{
+    width: 80px;
+    margin: 5px;
+}
+
+
+.div-fondo{
+    border: 3px solid black;
+    width: 42%;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+          
+.parrafo-fondo-titulo{
+    margin: 5px;
+}
+
+#color-fondo{
+    width: 80px;
+    margin: 5px;
+}
+
+
+#check-color{
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+}
+
+
+.contenedor-contorno{
+    border: 3px solid black;
+    width: 96%;
+    height: 80px;
+    margin: 5px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.parrafo-contorno{
+    width: 90%;
+    margin: 3px;
+}
+
+.botones-contorno{
+    height: 30px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.contenedor-espaciado{
+    border: 3px solid black;
+    width: 96%;
+    height: 70px;
+    margin: 5px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+#espaciado{
+    width: 100%;
+    margin: 8px;
+}
+ #input-number{
+     width: 85%;
+     border: none;
+     border-radius: 6px;
+     text-align: center;
+ } 
+
+.contenedor-interlineado{
+    border: 3px solid black;
+    width: 96%;
+    height: 70px;
+    margin: 5px;
+    font-family: "Orbitron", serif; 
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.parrafo-interlineado{
+  width: 100%;
+  margin: 8px;
+}
+
+.select-interlineado{
+   width: 85%;
+   border: none;
+   border-radius: 6px;
+   text-align: center;
+}
+
+
+/* .............................MEDIAS QUERYS ................................*/
+
+@media (min-width: 320px ){
+
+    body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor-img{
+    width: 98%;
+    height: 660px;
+    border: 3px solid black;
+}
+.contenedor-header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(236, 163, 117) ;
+    border: 3px solid black;
+}
+
+.h1-section{
+    width: 280px;
+    font-size: 25px;
+    border: 3px solid black;
+}
+
+nav{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", serif;
+    font-size: 10px;
+    border: 3px solid black;
+}
+
+.boton-nav-1 {
+    width: 130px;
+    height: 30px;
+    margin: 3px 5px; 
+
+}
+
+.boton-nav-2 {
+    width: 130px;
+    height: 30px;
+    margin: 3px 5px; 
+
+}
+
+.boton-nav-3 {
+    width: 170px;
+    height: 30px;
+    margin: 3px 5px; 
+}
+
+/*------------------------------------------SECCION MAIN-----------------------------------*/
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: rgba(180, 216, 49, 0.712);
+
+}
+.contenedor-seccion{
+    width: 90%;
+}
+
+
+
+.seccion-texto{
+    display: none;
+}
+
+.aside-contenedor{
+    display: none;
+}
+}

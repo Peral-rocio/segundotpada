@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+     <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title> Entrega Trabajo 2 JS</title>
+</head>
+<body>
+    <section class="contenedor-img">
+        <header class="contenedor-header">
+            <h1 class="h1-section">
+                GENERADOR DE MEMES
+            </h1>
+            <nav>
+                <button class="boton-nav-1">
+                    <i class="fi fi-rr-picture"></i> 
+                    <p class="titulo-botonimg"> 
+                        Imagen</p>
+                </button>
+                <button class="boton-nav-2">
+                    <i class="fi fi-br-text"></i>
+                    <p class="titulo-botonimg">
+                        texto
+                    </p>
+                </button>
+                <button class="boton-nav-3">
+                    <i class="fi fi-rr-bulb"></i>
+                    <p class="titulo-botonimg">
+                        Modo claro
+                    </p>
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section class="contenedor-seccion">
+                <div class="contenedor-textos">
+               <p>
+                top texto
+               </p>
+                </div>
+                <div class="contenedor-medio">
+                  <img  src="" alt="">
+                </div>
+                <div class="contenedor-textos">
+                  <p>
+                    botton text
+                  </p>
+                </div>
+            </section> 
+            <button class="boton-descarga">
+                Descargar meme
+            </button>
+        </main>
+    </section>
+<aside class="aside-contenedor">
+        <section class="seccion-imagen">
+        <h1 class="h1-aside">
+            IMAGEN
+        </h1>
+            <div class="div-url">
+                <label>Url</label>
+                <input  id="url-input" type="url">
+            </div>
+            <div class="div-color-fondo">
+                <label id="label-fondo"> FONDO</label>
+                <input class="input-color-fondo" type="color">
+                <select class="select-fondo">
+                    <option value="">Ninguno </option>
+                    <option value="">Aclarar</option>
+                    <option value="">Oscurecer</option>
+                    <option value="">Diferenciar</option>
+                    <option value="">Luminosidad</option>
+                    <option value="">Multiplicar</option>
+                </select>
+            </div>
+            <div class="contenedor-filtros">
+                <p>FILTROS</p>
+                  <label class="label-range"> Brillo</label>
+                <input type="range">
+                <label class="label-range"> Opacidad</label>
+                <input type="range">
+                <label class="label-range" > Contraste</label>
+                <input type="range">
+                <label class="label-range" > Desenfoque</label>
+                <input type="range">
+                <label class="label-range" >Escala de grises</label>
+                <input type="range">
+                <label class="label-range" >Sepia </label>
+                <input type="range">
+                <label class="label-range" > HUE </label>
+                <input type="range">
+                <label class="label-range" >Saturado</label>
+                <input type="range">
+                <label class="label-range"> Negativo </label>
+                <input type="range">
+            </div>
+            <button class="boton-restablecer">
+                Restablecer Valores
+            </button>
+        </section>
+    </aside>
+   
+    <section class="seccion-texto">
+        <h1 class="h1-texto">
+            Texto
+        </h1>
+        <div class="div-toptext">
+            <p class="p-superior">
+                SUPERIOR
+            </p>
+            <textarea class="textarea">
+                TOP TEXT
+            </textarea>
+            <input id= "check-texto"  type="checkbox">
+            <label> Sin texto superior</label>
+        </div>
+        <div class="div-fuente">
+            <p class="parrafo-fuente-titulo">
+                FUENTE
+            </p>
+            <select class="clases-fuente"> 
+                <option value=""> times</option>
+                <option value="">arial </option>
+            </select>
+           <input  class="tamaño-fuente"   type="number" min="0" max="42" >
+            <button>
+                <i id="iconos-fuente"  class="fi fi-br-align-left"></i>
+            </button>
+            <button>
+                <i id="iconos-fuente" class="fi fi-br-align-center"></i>
+            </button>
+            <button>
+                <i  id="iconos-fuente" class="fi fi-br-symbol"></i>
+            </button>
+        </div>
+        <div class="contenedor-color">
+            <div class="div-colores">
+                <p class="parrafo-color-titulo">
+                    COLOR
+                </p>
+                <input id="input-color" type="color">
+            </div>
+            <div class="div-fondo">
+                <p class="parrafo-fondo-titulo">
+                    FONDO
+                </p>
+                <input id="color-fondo" type="color">
+            </div>
+            <input  id="check-color"   type="checkbox">
+            <label> fondo transparente</label>
+        </div>
+
+        <div class="contenedor-contorno">
+            <p class="parrafo-contorno">
+                CONTORNO
+            </p>
+            <button class="botones-contorno">Ninguno</button>
+            <button class="botones-contorno"> Claro</button>
+            <button class="botones-contorno">Oscuro</button>
+        </div>
+        <div class="contenedor-espaciado">
+            <label id="espaciado"> ESPACIADO</label>
+            <input id="input-number" type="number" >
+        </div>
+        <div class="contenedor-interlineado">
+            <p class="parrafo-interlineado">
+                INTERLINEADO
+            </p>
+            <select class="select-interlineado">
+                <option value=""> 1 </option>
+                <option value=""> 1,5</option>
+                <option value=""> 2 </option>
+            </select>
+        </div>
+    </section>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

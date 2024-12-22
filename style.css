@@ -1,14 +1,15 @@
 body{
     margin: 0px;
-    display: flex;
+    padding: 0px;
     box-sizing: border-box;
     border: 3px solid black;
 
 }
 /*----------------------------------------------SECCION HEADER---------------------------*/
-
-.contenedor-img{
-    width: 80%;
+.contenedorCentral{
+    width: 99%;
+    height: 660px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -49,29 +50,17 @@ nav{
     border: 3px solid black;
 }
 
-.boton-nav-1 {
-    width: 120px;
-    height: 30px;
-    margin: 3px 10px; 
-    text-align: center;
+.botonNav{
+        width: 120px;
+        height: 30px;
+        margin: 3px; 
+        text-align: center;
 }
 
-.boton-nav-2 {
-    width: 120px;
-    height: 30px;
-    margin: 3px 10px; 
-    text-align: center;
-}
-
-.boton-nav-3 {
-    width: 120px;
-    height: 30px;
-    margin: 3px 10px; 
-    text-align: center;
-}
 .titulo-botonimg{
     display: inline;
-    margin: 0 5px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*------------------------------------------SECCION MAIN-----------------------------------*/
@@ -107,7 +96,7 @@ main{
     border: 3px black solid;
 }
 
-.contenedor-medio{
+#img{
     width: 100%;
     height: 90%;
     background-color: black;
@@ -132,7 +121,7 @@ main{
 /*------------------------------------------------------- ASIDE----------------------------------------*/
 
 .aside-contenedor{
-    width: 300px;
+    width: 99%;
     height: 660px;
     border: 3px solid black;
     background-color: rgba(236, 163, 117);
@@ -140,6 +129,18 @@ main{
     top: 0;
     right: 0; */
 } 
+
+.cierre-imagen{
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px 0px 280px;
+    border: 3px black;
+    background-color: rgba(128, 128, 128, 0.63);
+}
 
 .seccion-imagen{
     width: 98%;
@@ -151,14 +152,14 @@ main{
 }
 
 .h1-aside{
-    margin: 5px;
+    margin: 0px 5px 5px 5px;
     font-family: "Freckle Face", serif;
     text-align: center;
     border: 3px solid black;
 }
 
-.div-url{
-    width: 96%;
+.divUrl{
+    width: 92%;
     height: 50px;
     font-family: "Orbitron", serif;
     font-size: 14px;
@@ -166,13 +167,19 @@ main{
     flex-direction: column;
     justify-content: space-around;
     border: 3px solid black;
-    margin: 10px;
+    padding: 5px;
+}
+
+#urlInput{
+    width: 260px;
+    border: none;
+    border-radius: 6px;
 }
 
 
 .div-color-fondo{
-    width: 96%;
-    height: 50px;
+    width: 95%;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -184,6 +191,7 @@ main{
     font-family: "Orbitron", serif;
     font-size: 14px;
     width: 100%;
+    margin: 0px 5px;
 }
 .input-color-fondo{
     width: 30%;
@@ -209,7 +217,7 @@ main{
 }
 
 .boton-restablecer{
-    width: 140px;
+    width: 130px;
     font-family: "Orbitron", serif;
     font-size: 12px;
     background-color: rgba(180, 216, 49, 0.712);
@@ -227,8 +235,8 @@ main{
 /* -----------------------------------SECCION TEXTO ------------------------ */
 
 .seccion-texto{
-        width: 300px;
-        height: 650px;
+        width: 97%;
+        height: 660px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -265,7 +273,7 @@ main{
     border-radius: 6px;
 }
 
-#check-texto{
+#checkTexto{
     width: 15px;
     height: 15px;
     margin: 0px 15px;
@@ -297,7 +305,7 @@ main{
     margin: 3px 10px;
 }
 
-#iconos-fuente{
+#iconosFuente{
     width: 15px;
     height: 20px;
     display: flex;
@@ -308,7 +316,7 @@ main{
 .contenedor-color{
     border: 3px solid black;
     width: 96%;
-    height: 100px;
+    height: 110px;
     margin: 3px;
     font-family: "Orbitron", serif; 
     font-size: 14px;
@@ -334,7 +342,7 @@ main{
     margin: 5px;
 }
 
-#input-color{
+#inputColor{
     width: 80px;
     margin: 5px;
 }
@@ -355,13 +363,13 @@ main{
     margin: 5px;
 }
 
-#color-fondo{
+#colorFondo{
     width: 80px;
     margin: 5px;
 }
 
 
-#check-color{
+#checkColor{
     width: 15px;
     height: 15px;
     margin: 10px;
@@ -409,7 +417,7 @@ main{
     width: 100%;
     margin: 8px;
 }
- #input-number{
+ #inputNumber{
      width: 85%;
      border: none;
      border-radius: 6px;
@@ -521,12 +529,4 @@ main{
 }
 
 
-
-.seccion-texto{
-    display: none;
-}
-
-.aside-contenedor{
-    display: none;
-}
 }

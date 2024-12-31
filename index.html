@@ -19,7 +19,7 @@
     <title> Entrega Trabajo 2 JS</title>
 </head>
 
-<body>
+<body class="modoClaro">
     <section class="contenedorCentral" id="divCentral">
         <header class="contenedor-header" id="divHeader">
             <h1 class="h1-section" id="#h1Titulo">
@@ -38,7 +38,7 @@
                         texto
                     </p>
                 </button>
-                <button class="botonNav" id="modoClaro">
+                <button class="botonNav">
                     <i class="fi fi-rr-bulb"></i>
                     <p class="titulo-botonimg">
                         Modo claro
@@ -48,16 +48,16 @@
         </header>
         <main>
             <section class="contenedor-seccion" id="divSecciones">
-                <div class="contenedor-textos" id="divTop">
-                    <p>
+                <div class="contenedorTexto1">
+                    <p id="textoArriba">
                         top texto
                     </p>
                 </div>
-                <div id="img">
-                    <img src="alt">
+                <div>
+                    <img  id="imagenMeme" src="" alt="">
                 </div>
-                <div class="contenedor-textos" id="divBottom">
-                    <p>
+                <div class="contenedorTexto2">
+                    <p id="textoAbajo">
                         botton text
                     </p>
                 </div>
@@ -143,6 +143,18 @@
             <input id="checkTexto" type="checkbox">
             <label> Sin texto superior</label>
         </div>
+
+        <div class="div-topbuttom" id="buttomText">
+        <p class="p-inferior">
+            INFERIOR
+        </p>
+        <textarea class="textarea" id="textareaButtom">
+            BUTTON TEXT
+        </textarea>
+        <input id="checkTextoInferior" type="checkbox">
+        <label> Sin texto Inferior</label>
+    </div>
+
         <div class="div-fuente" id="divFuentes">
             <p class="parrafo-fuente-titulo">
                 FUENTE

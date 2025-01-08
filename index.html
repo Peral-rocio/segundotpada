@@ -11,6 +11,9 @@
         rel="stylesheet">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playwrite+AU+SA:wght@100..400&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
@@ -21,11 +24,11 @@
 
 <body class="modoClaro">
     <section class="contenedorCentral" id="divCentral">
-        <header class="contenedor-header" id="divHeader">
-            <h1 class="h1-section" id="#h1Titulo">
+        <header id="divHeader">
+            <h1 class="h1Section" id="h1Titulo">
                 GENERADOR DE MEMES
             </h1>
-            <nav id="navegación">
+            <nav id="navBotones">
                 <button class="botonNav" id="boton1">
                     <i class="fi fi-rr-picture"></i>
                     <p class="titulo-botonimg">
@@ -48,12 +51,12 @@
         </header>
         <main>
             <section class="contenedor-seccion" id="divSecciones">
-                <div class="contenedorTexto1">
-                    <p id="textoArriba">
+                <div  class="contenedorTexto1">
+                    <p  id="textoArriba">
                         top texto
                     </p>
                 </div>
-                <div>
+                <div class="divCentral">
                     <img  id="imagenMeme" src="" alt="">
                 </div>
                 <div class="contenedorTexto2">
@@ -68,71 +71,76 @@
         </main>
     </section>
     <aside class="aside-contenedor" id="divAside">
-        <button class="cierre-imagen" id="botonCierre1">
+        <button  id="botonCierre1">
             X
         </button>
         <section class="seccion-imagen" id="opcionesImagen">
-            <h1 class="h1-aside" id="asideTitulo">
+            <h2 class="h2-aside">
                 IMAGEN
-            </h1>
+            </h2>
             <div class="divUrl">
                 <label>Url</label>
                 <input id="urlInput" type="url">
             </div>
-            <div class="div-color-fondo" id="colorFondo">
-                <label id="label-fondo"> FONDO </label>
-                <input class="input-color-fondo" id="inputColorFondo" type="color">
-                <select class="select-fondo" id="selectFondo">
-                    <option value="unset">Ninguno </option>
-                    <option value="lighten">Aclarar</option>
-                    <option value="darken">Oscurecer</option>
-                    <option value="difference">Diferenciar</option>
-                    <option value="luminosity">Luminosidad</option>
-                    <option value="multiply">Multiplicar</option>
-                </select>
-            </div>
+
+<div class=" divColorFondo">
+    <label id="colorFondo"> FONDO</label>
+    <input class="inputFondoColor" type="color">
+
+    <select id="selectFondo">
+        <option value="unset">Ninguno</option>
+        <option value="lighten"> Aclarar</option>
+        <option value="darken">Oscurecer</option>
+        <option value="difference">Diferenciar</option>
+        <option value="luminosity"> Luminosidad</option>
+        <option value="multiply"> Multiplicar</option>
+    </select>
+</div>
+
             <div class="contenedor-filtros" id="divFiltros">
                 <p> FILTROS </p>
                 <label class="label-range"> Brillo</label>
-                <input type="range" id="brillo" value="brightness" min="0" max="1" step="0.1">
+                <input type="range" class="range" id="brillo" value="brightness" min="0" max="1" step="0.1">
 
                 <label class="label-range"> Opacidad</label>
-                <input type="range" id="opacidad" value="opacity" min="0" max="1" step="0.1">
+                <input type="range" class="range" id="opacidad" value="opacity" min="0" max="1" step="0.1">
 
                 <label class="label-range"> Contraste</label>
-                <input type="range" id="contraste" value="contrast" min="100%" max="1000%" step="1%">
+                <input type="range" class="range" id="contraste" value="contrast" min="100%" max="1000%" step="1%">
 
                 <label class="label-range"> Desenfoque</label>
-                <input type="range" id="desenfoque" value="blur" min="0px" max="10px" step="0.1px">
+                <input type="range"class="range" id="desenfoque" value="blur" min="0px" max="10px" step="0.1px">
 
                 <label class="label-range">Escala de grises</label>
-                <input type="range" id="escalaDeGrises" value="grayscale" min="0%" max="100%" step="1%">
+                <input type="range" class="range" id="escalaDeGrises" value="grayscale" min="0%" max="100%" step="1%">
 
                 <label class="label-range">Sepia </label>
-                <input type="range" id="sepia" value="sepia" min="0%" max="100%" step="1%">
+                <input type="range" class="range" id="sepia" value="sepia" min="0%" max="100%" step="1%">
 
                 <label class="label-range"> HUE </label>
-                <input type="range" id="hue" value="hue-rotation" min="0deg" max="359deg" step="1deg">
+                <input type="range" class="range" id="hue" value="hue-rotation" min="0deg" max="359deg" step="1deg">
 
                 <label class="label-range">Saturado</label>
-                <input type="range" id="saturado" value="saturation" min="100%" max="1000%" step="10%">
+                <input type="range" class="range" id="saturado" value="saturate" min="100%" max="1000%" step="10%">
 
                 <label class="label-range"> Negativo </label>
-                <input type="range" id="negativo" value="invert" min="0" max="1" step="0.1">
+                <input type="range" class="range" id="negativo" value="invert" min="0" max="1" step="0.1">
             </div>
-            <button class="boton-restablecer" id="botonRestablecer">
+            <button class="boton-restablecer">
                 Restablecer Valores
             </button>
         </section>
     </aside>
 
+    <!-- SECCION DE TEXTOOO ------------------------>
+
     <section class="seccion-texto" id="divTexto">
-        <button class="cierre-imagen" id="botonCierre2">
+        <button id="botonCierre2">
             X
         </button>
-        <h1 class="h1-texto" id="h1Texto">
+        <h2 class="h2-texto">
             Texto
-        </h1>
+        </h2>
         <div class="div-toptext" id="topText">
             <p class="p-superior">
                 SUPERIOR
@@ -159,28 +167,30 @@
             <p class="parrafo-fuente-titulo">
                 FUENTE
             </p>
-            <select class="clases-fuente" id="selectFuentes">
-                <option value="impact" id="impact">Impact</option>
-                <option value="arial" id="arial">Arial</option>
-                <option value="arialblack" id="arialBlack">Arial Black </option>
-                <option value="american" id="american">American Typewriter</option>
-                <option value="mono" id="mono">Andale Mono </option>
-                <option value="comic" id="comic"> Comic Sans Ms</option>
-                <option value="helvetica" id="helvetica">Helvetica </option>
-                <option value="verdana" id="verdana">Verdana</option>
-                <option value="times" id="times">times New Roman</option>
+            <select class="clases-fuente">
+                <option value="DM Serif Text, serif" id="dmSherifText">DM Serif text</option>
+                <option value="Playwrite AU SA, serif" id="australia">Playwrite Australia</option>
+                <option value="Roboto Mono, serif" id="robotoMono">Roboto Mono </option>
+                <option value="Righteous, serif" id="righteous"> Righteous </option>
             </select>
-            <input class="tamaño-fuente" id="numeroFuente" type="number" min="0" max="18">
-            <button>
-                <i id="iconosFuente1" class="fi fi-br-align-left"></i>
-            </button>
-            <button>
-                <i id="iconosFuente2" class="fi fi-br-align-center"></i>
-            </button>
-            <button>
-                <i id="iconosFuente3" class="fi fi-br-symbol"></i>
-            </button>
+            <input class="tamaño-fuente" type="number" min="5" max="18">
+
+
+            <div class="iconosAlineacion">
+                <button>
+                    <i id="aIzquierda" class="fi fi-br-align-left"></i>
+                </button>
+                <button>
+                    <i id="aCentro" class="fi fi-br-align-center"></i>
+                </button>
+                <button>
+                    <i id="aDerecha" class="fi fi-br-symbol"></i>
+                </button>
+            </div>
         </div>
+<!-- 
+      CONTENEDOR COLOR  -----------------------------   -->
+
         <div class="contenedor-color" id="seccionColor">
             <div class="div-colores" id="divColores">
                 <p class="parrafo-color-titulo">
@@ -188,13 +198,15 @@
                 </p>
                 <input id="inputColor" type="color">
             </div>
+
             <div class="div-fondo" id="divFondo">
                 <p class="parrafo-fondo-titulo">
                     FONDO
                 </p>
-                <input id="colorFondo" type="color">
+                <input id="inputFondo" type="color">
             </div>
-            <input id="checkColor" type="checkbox">
+
+            <input id="checkColorFondo" type="checkbox">
             <label> fondo transparente</label>
         </div>
 
@@ -214,7 +226,7 @@
             <p class="parrafo-interlineado">
                 INTERLINEADO
             </p>
-            <select class="select-interlineado" id="selectInterlineado">
+            <select class="select-interlineado">
                 <option value="0.8"> 0.8 </option>
                 <option value="1"> 1 </option>
                 <option value="1.2"> 1.2 </option>

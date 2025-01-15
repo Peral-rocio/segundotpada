@@ -22,7 +22,7 @@
     <title> Entrega Trabajo 2 JS</title>
 </head>
 
-<body class="modoClaro">
+<body class="modoClaro" id="modoOscuro">
     <section class="contenedorCentral" id="divCentral">
         <header id="divHeader">
             <h1 class="h1Section" id="h1Titulo">
@@ -31,7 +31,7 @@
             <nav id="navBotones">
                 <input class="botonNav" id="botonimagen" type="button" value="Imagen">
                 <input  class="botonNav"  id="botontexto"  type="button" value="Texto">
-                <input class="botonNav" id="modoClaro" type="button" value="Modo Claro">
+                <input class="botonNav" id="bModos" type="button" value="Modo Claro">
             </nav>
         </header>
         <main>
@@ -196,14 +196,20 @@
             <p class="parrafo-contorno">
                 CONTORNO
             </p>
-            <button class="botones-contorno" id="botonContorno1">Ninguno</button>
-            <button class="botones-contorno" id="botonContorno2"> Claro</button>
-            <button class="botones-contorno" id="botonContorno3">Oscuro</button>
+            <button type="button" class="botones-contorno" id="botonContorno1">Ninguno</button>
+            <button type="button" class="botones-contorno" id="botonContorno2"> Claro</button>
+            <button type="button" class="botones-contorno" id="botonContorno3">Oscuro</button>
         </div>
+
+        <!-- espaciado -->
+
         <div class="contenedor-espaciado" id="divEspaciado">
             <label id="espaciado"> ESPACIADO</label>
-            <input id="inputNumber" type="number">
+            <input id="inputNumber" type="number" value="10" min="10px" max="50px">
         </div>
+
+        <!-- interlineado  -->
+
         <div class="contenedor-interlineado" id="divInterlineado">
             <p class="parrafo-interlineado">
                 INTERLINEADO

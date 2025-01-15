@@ -12,21 +12,21 @@ function $(elements) {
 
 //MODO CLARO-MODO OSCURO
 
-//const $body = $ ("body")
-//const $botonModos = $("modoClaro")
+const $body = $ ("body")
+const $botonModos = $("#bModos")
+const $modoClaro = $(".modoClaro")
+const $modoOscuro = $(".modoOscuro")
 
-//$botonModos.addEventListener ("Click", () => {
-  //if ($body.classList.contains("modoClaro")){
-    //$body.classList.add("modoOscuro")
-    //$body.classList.remove("modoClaro")
-//}
-//else {
-  //$body.classList.add("modoClaro")
-    //$body.classList.remove("modoOscuro")
-//}
-//})
-
-
+$botonModos.addEventListener ("Click", () => {
+  if ($body.classList.contains("modoClaro")){
+    $body.classList.remove("modoClaro");
+    $body.classList.add("modoOscuro");   
+}else {
+  $body.classList.add("modoOscuro");
+  $body.classList.remove("modo oscuro");
+  $body.classList.add ("modoClaro")
+}
+})
 
 //BOTON DE IMAGEN
 
@@ -141,7 +141,6 @@ const $inputSepia = $ ("#sepia")
 $inputSepia.addEventListener ("input" , () => {
   $imagenMeme.style.filter = ` sepia (${$inputSepia.value}%)`
 })
-
 
 const $inputSaturado = $("#saturado")
 $inputSaturado.addEventListener ("input" , () => {
@@ -334,7 +333,36 @@ $checkTransparente.addEventListener("click", () => {
 
   //Contorno de las letras
 
-  
+  const $ninguno = $("#botonContorno1")
+
+  $ninguno.addEventListener("click", () => {
+    $textoArriba.style.textShadow = "" ;
+    $textoAbajo.style.textShadow= "" ;
+  })
+
+  const $claro= $("#botonContorno2")
+
+  $claro.addEventListener("click", () => {
+      $textoArriba.style.textShadow= "2px 2px 5px white";
+      $textoAbajo.style.textShadow = "2px 2px 5px white";
+  })
+
+  const $oscuro = $("#botonContorno3")
+
+  $oscuro.addEventListener("click", () => {
+     $textoArriba.style.textShadow= "2px 2px 5px black";
+     $textoAbajo.style.textShadow= "2px 2px 5px black";
+  })
+
+  //Espaciado 
+
+ const $inputEspaciado = $("#inputNumber")
+
+ //interlineado
+  const $inputinterlineado = $(".select-interlineado")
+
+
+
 
 
 

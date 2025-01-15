@@ -1,17 +1,16 @@
-body {
+body .modoClaro {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-.modoClaro{
     background-color: white;
     color: black;
 }
 .modoOscuro{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     background-color: black;
     color: white;
-    background-color: transparent;
 }
 
 /*----------------------------------------------SECCION HEADER---------------------------*/
@@ -404,7 +403,7 @@ main{
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
 }
@@ -457,7 +456,6 @@ main{
 
 
 .contenedor-contorno{
-    border: 3px solid black;
     width: 96%;
     height: 80px;
     margin: 5px;
@@ -478,6 +476,7 @@ main{
     height: 30px;
     margin: 3px;
     padding: 5px;
+    border-radius: 6px;
 }
 
 .contenedor-espaciado{

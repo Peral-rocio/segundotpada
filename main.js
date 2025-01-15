@@ -6,33 +6,69 @@ function $(elements) {
 }
 // AQUI COMIENZA EL TP
 
-//MODO CLARO-MODO OSCURO
-
-const $body = $ ("body")
-const $botonModos = $(".botonNav")
-const $modoClaro = $(".modoClaro")
-const $modoOscuro = $ (".modoOscuro")
-
-$botonModos.addEventListener ("Click", () => {
-  if ($body.classList.contains("modoClaro")){
-    $body.classList.add("modoOscuro")
-    $body.classList.remove("modoClaro")
-}
-else {
-  $body.classList.add("modoClaro")
-    $body.classList.remove("modoOscuro")
-}
-})
-
 //SECCION DE HEADER
 
-//BOTONES 
+//BOTONES :
 
-//IMG
+//MODO CLARO-MODO OSCURO
+
+//const $body = $ ("body")
+//const $botonModos = $("modoClaro")
+
+//$botonModos.addEventListener ("Click", () => {
+  //if ($body.classList.contains("modoClaro")){
+    //$body.classList.add("modoOscuro")
+    //$body.classList.remove("modoClaro")
+//}
+//else {
+  //$body.classList.add("modoClaro")
+    //$body.classList.remove("modoOscuro")
+//}
+//})
 
 
 
+//BOTON DE IMAGEN
 
+const $botonimg = $ ("#botonimagen")
+const $divimg = $("#divAside")
+
+
+$botonimg.addEventListener("click", () => {
+$divimg.style.display = "flex";
+})
+
+
+//boton de cierre imagen:
+
+const $cierreImagen = $("#botonCierre1")
+
+$cierreImagen.addEventListener("click", () => { 
+  $divimg.style.display = "none"
+}) 
+
+
+//BOTON TEXTO
+
+const $botonTexto = $("#botontexto")
+const $divTexto = $ ("#divTexto")
+
+$botonTexto.addEventListener("click", () => {
+  $divTexto.style.display = "flex";
+})
+
+//boton de cierre texto:
+
+const $cierreTexto = $("#botonCierre2")
+
+$cierreTexto.addEventListener("click", () => {
+  $divTexto.style.display = "none";
+})
+
+
+
+//boton de descarga:
+ 
 
 //SECCION IMAGEN:
 
@@ -47,6 +83,7 @@ $url.addEventListener( "input", () => {
 }
 } )
 
+
 //fondo color
 
 const $inputColorFondoImg = $ (".inputFondoColor")
@@ -59,59 +96,25 @@ $inputColorFondoImg.addEventListener ("input" , () => {
 
 // fondo select
 
-const $inputFiltrosFondo = $("#selectFondo")
+const $inputFiltrosFondo = $("#selectFondo") 
 
-$inputFiltrosFondo.addEventListener ("change" , () => {
-     const $imagenMeme = $inputFiltrosFondo.value
-
-     switch ($imagenMeme) {
-      
-      case "1":
-        $imagenMeme.style.mixBlendMode = "unset" ;
-
-        break;
-
-      case "2":
-        $imagenMeme.style.mixBlendMode= "lighten";
-
-        break;
-
-      case "3":
-        $imagenMeme.style.mixBlendMode = "darken";
-
-        break;
-      
-      case "4":
-        $imagenMeme.style. mixBlendMode= "difference";
-
-        break;
-      
-      case "5":
-        $imagenMeme.style.mixBlendMode = "luminosity";
-        
-        break;
-        
-      case "6":
-      $imagenMeme.style.mixBlendMode= "multiply";
-     
-    default:
-      $imagenMeme.style.filter = "none";
-      $imagenMeme.style.mixBlendMode = "unset";
-    }
-
+$inputFiltrosFondo.addEventListener("input", () => {
+  $imagenMeme.style.backgroundImage = `backgroundBlenMode ${$inputFiltrosFondo.value}`
 })
 
-//filtros
+//FILTROOOOOOS -----------------------------------------------------
+
 const $inputBrillo = $("#brillo")
 
-$inputBrillo.addEventListener( "input", () =>{
-  $imagenMeme.style.filter = `brightness (${$inputBrillo.value})`
+$inputBrillo.addEventListener ("input", () => {
+  const aux = $imagenMeme.style.filter
+  $imagenMeme.style.filter = `brightness (${$inputBrillo.value})`;
 })
-
 
 const $inputOpacidad = $("#opacidad")
 
 $inputOpacidad.addEventListener ( "input", () => {
+  const aux = $imagenMeme.style.filter
   $imagenMeme.style.filter = `opacity (${$inputOpacidad.value})`
 })
 
@@ -136,13 +139,9 @@ $inputEscalaDeGrises.addEventListener ( "input", ()=> {
 const $inputSepia = $ ("#sepia")
 
 $inputSepia.addEventListener ("input" , () => {
-  $imagenMeme.style.filter = `sepia (${$inputSepia.value}%)`
+  $imagenMeme.style.filter = ` sepia (${$inputSepia.value}%)`
 })
 
-const $inputHue = $("hue")
-$inputHue.addEventListener("input", () => {
-  $imagenMeme.style.filter = `hue-rotate (${$inputHue.value})deg`
-})
 
 const $inputSaturado = $("#saturado")
 $inputSaturado.addEventListener ("input" , () => {
@@ -154,52 +153,43 @@ $inputNegativo.addEventListener ("input" , () => {
 $imagenMeme.style.filter = `invert (${$inputNegativo.value})`
 })
 
-// restablecer valores boton
+// restablecer valores boton --------------------------------------
 const $restablecervalores1 = $(".boton-restablecer")
 
 function restablecervalores (){
    
-  $url.value = " ";
+  $url.value = "";
 
    $imagenMeme.value = "";
 
-   $inputColorFondoImg.value = ""
+   $inputColorFondoImg.value = "";
 
-   $inputFiltrosFondo.value = " ";
+   $inputFiltrosFondo.value= "";
 
-   $inputBrillo.value ="0" 
+   $inputBrillo.value = "0" 
 
-  $inputOpacidad.value ="0" 
+  $inputOpacidad.value = "0" 
 
-  $inputContraste.value ="0" 
+  $inputContraste.value = "0" 
 
-  $inputDesenfoque.value ="0" 
+  $inputDesenfoque.value = "0" 
 
-  $inputEscalaDeGrises.value ="0" 
+  $inputEscalaDeGrises.value= "0" 
 
-  $inputSepia.value="0" 
+  $inputSepia.value = "0" 
 
-  $inputHue.value ="0" 
 
-  $inputSaturado.value="0" 
+  $inputSaturado.value = "0" 
 
-  $inputNegativo.value ="0" 
+  $inputNegativo.value  ="0" 
 }
 
-restablecervalores ()
+restablecervalores()
 
-$restablecervalores1.addEventListener ("click", restablecervalores)
+$restablecervalores1.addEventListener("click", restablecervalores)
 
 
 //SECCION TEXTO:
-//BOTON DE CERRAR LA SECCION 
-
-const $botonCierre = $("#botonCierre2")
-const $seccionTexto = $("#divTexto")
-
-$botonCierre.addEventListener ("Click", () => {
- $seccionTexto.style.display = "none" 
-})
 
 //texto superior:
 
@@ -217,9 +207,8 @@ const $divTextoTop = $ (".contenedorTexto1")
 $checkTexto.addEventListener("input", () => {
  if ($divTextoTop.style.display = "flex") {
   $divTextoTop.style.display = "none"
-} } )
-
-// COMO LO HAGO VOLVER? -..........................................
+} 
+} )
 
 //texto inferior:
 
@@ -240,7 +229,6 @@ $checkInferior.addEventListener ("input" , () => {
   $divInferior.style.display = "none"
 })
 
-//como lo hago volver? ............................................................
 
 //FUENTE
  
@@ -256,9 +244,57 @@ $fuenteDeLetras.addEventListener ( "input" , () => {
 const $tamañoFuente = $(".tamaño-fuente")
 
 $tamañoFuente.addEventListener ("input", () => {
-  $textoArriba.style.fontSize = $tamañoFuente.value
-  $textoAbajo.style.fontSize = $tamañoFuente.value
+  $textoArriba.style.fontSize = $tamañoFuente.value + "px";
+  $textoAbajo.style.fontSize = $tamañoFuente.value +"px"; 
 })
+
+//ALINEACION 
+
+//IZQUIERDA 
+
+const $izquierda = $("#aIzquierda")
+
+$izquierda.addEventListener("click", () =>{
+ if ($divTextoTop.style.justifyContent = "center"){
+  $divTextoTop.style.justifyContent = "start";
+ }
+})
+
+$izquierda.addEventListener("click", () =>{
+  if ($divInferior.style.justifyContent = "center"){
+   $divInferior.style.justifyContent = "start";
+  }
+ })
+
+ //CENTRO
+
+ const $centro = $("#aCentro")
+
+ $centro.addEventListener ("click", () => {
+  $divTextoTop.style.justifyContent = "center";
+ })
+
+ $centro.addEventListener ("click", () => {
+  $divInferior.style.justifyContent = "center";
+ })
+
+ //DERECHA
+
+ const $derecha = $("#aDerecha")
+
+ $derecha.addEventListener("click", () => {
+  if ($divTextoTop.style.justifyContent = "center"){
+    $divTextoTop.style.justifyContent = "end";
+   }
+ })
+
+ $derecha.addEventListener("click", () => {
+  if ($divInferior.style.justifyContent = "center"){
+    $divInferior.style.justifyContent = "end";
+   }
+
+ })
+
 
 //COLOR DE LETRAS
 
@@ -280,14 +316,26 @@ $colorDeFondo.addEventListener("input", () => {
 }
 )
 
-//CHECK DE FONDO TRANSPARENTE ( hacerlo funcionar)
+//CHECK DE FONDO TRANSPARENTE
  
 const $checkTransparente = $ ("#checkColorFondo")
 
-$checkTransparente.addEventListener("input", () => {
-  $divTextoTop.style.backgroundColor = rgba( 0, 0, 0, 0) ;
-  $divInferior.style.backgroundColor =  rgba (0,0,0,0) ; 
-})
+$checkTransparente.addEventListener("click", () => {
+  if ($divTextoTop.style.backgroundColor = "") {
+    $divTextoTop.style.backgroundColor = `rgba (0,0,0,0)`;
+  }
+  })
+
+$checkTransparente.addEventListener("click", () => {
+  if ($divInferior.style.backgroundColor = "") {
+    $divInferior.style.backgroundColor = `rgba (0,0,0,0)`;
+  }
+  })
+
+  //Contorno de las letras
+
+  
+
 
 
 

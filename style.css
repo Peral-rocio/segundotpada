@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    position: relative;
 }
 
 .modoClaro{
@@ -12,6 +11,7 @@ body {
 .modoOscuro{
     background-color: black;
     color: white;
+    background-color: transparent;
 }
 
 /*----------------------------------------------SECCION HEADER---------------------------*/
@@ -112,6 +112,10 @@ main{
     border: 3px solid black;
 }
 
+.textosP{
+    margin: 0px 15px;
+}
+
 .divCentral{
     width: 300px;
     height: 220px;
@@ -152,11 +156,14 @@ main{
 .aside-contenedor{
     width: 100vw;
     height: 600px;
-    display: flex;
+    display: none;
+    background-color: rgb(128, 128, 128);
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    background-color: rgba(128, 128, 128, 0.452);
+    position: absolute;
+    top: 0;
+    
 } 
 
 
@@ -241,7 +248,6 @@ main{
     width: 250px;
     height: 3px;
     margin:  6px;
-    -webkit-appearance: none;
     border-radius: 5px;
 }
 
@@ -250,7 +256,7 @@ main{
     width: 130px;
     font-family: "Orbitron", serif;
     font-size: 12px;
-    background-color: rgba(128, 128, 128, 0.39);
+    background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 6px;
     border: none;
@@ -266,14 +272,16 @@ main{
 /* -----------------------------------SECCION TEXTO ------------------------ */
 
 .seccion-texto{
-        width: 100vw;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding: 3px;
-        border: 3px solid black;
+    width: 100vw;
+    height: 700px;
+    margin: 0px;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
+    background-color: rgb(128, 128, 128);
+    position: absolute;
+    top: 0;
 } 
 
 #botonCierre2{
@@ -311,7 +319,7 @@ main{
     height: 20px;
     margin: 5px;
     border-radius: 6px;
-    border: black;
+    border: black solid 3px
 }
 
 #checkTexto{
@@ -349,7 +357,6 @@ main{
 
 
 .div-fuente{
-    border: 3px solid black;
     width: 96%;
     height: 90px;
     margin: 3px;
@@ -371,12 +378,13 @@ main{
     width: 96%;
     margin: 3px;
     border-radius: 6px;
-    border: none;
+    border: black solid 3px;
 }
 
 .tamaño-fuente{
     width: 30%;
     margin: 3px 5px;
+    border: black solid 3px;
 }
 
 .iconosAlineacion{
@@ -387,12 +395,8 @@ main{
     align-items: center;
 } 
 
-.fi-br-align-left{
-    text-align: left;
-}
 
 .contenedor-color{
-    border: 3px solid black;
     width: 96%;
     height: 110px;
     margin: 3px;
@@ -400,13 +404,12 @@ main{
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 
 }
 
 .div-colores{
-    border: 3px solid black;
     width: 42%;
     height: 60px;
     margin: 5px;
@@ -427,7 +430,6 @@ main{
 
 
 .div-fondo{
-    border: 3px solid black;
     width: 42%;
     height: 60px;
     margin: 5px;
@@ -441,13 +443,13 @@ main{
     margin: 5px;
 }
 
-#colorFondo{
+#inputFondo{
     width: 80px;
     margin: 5px;
 }
 
 
-#checkColor{
+#checkColorFondo{
     width: 15px;
     height: 15px;
     margin: 10px;
@@ -481,7 +483,7 @@ main{
 .contenedor-espaciado{
     border: 3px solid black;
     width: 96%;
-    height: 70px;
+    height: 100px;
     margin: 5px;
     font-family: "Orbitron", serif; 
     font-size: 14px;
@@ -497,8 +499,10 @@ main{
 }
  #inputNumber{
      width: 85%;
-     border: none;
+     height: 18px;
+     margin: 5px;
      border-radius: 6px;
+     border: black solid 3px;
      text-align: center;
  } 
 
@@ -522,9 +526,11 @@ main{
 
 .select-interlineado{
    width: 85%;
-   border: none;
+   border: black solid 3px;
    border-radius: 6px;
    text-align: center;
+   margin: 5px;
+
 }
 
 

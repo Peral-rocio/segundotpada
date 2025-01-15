@@ -29,30 +29,15 @@
                 GENERADOR DE MEMES
             </h1>
             <nav id="navBotones">
-                <button class="botonNav" id="boton1">
-                    <i class="fi fi-rr-picture"></i>
-                    <p class="titulo-botonimg">
-                        Imagen
-                    </p>
-                </button>
-                <button class="botonNav" id="boton2">
-                    <i class="fi fi-br-text"></i>
-                    <p class="titulo-botonimg">
-                        texto
-                    </p>
-                </button>
-                <button class="botonNav">
-                    <i class="fi fi-rr-bulb"></i>
-                    <p class="titulo-botonimg">
-                        Modo claro
-                    </p>
-                </button>
+                <input class="botonNav" id="botonimagen" type="button" value="Imagen">
+                <input  class="botonNav"  id="botontexto"  type="button" value="Texto">
+                <input class="botonNav" id="modoClaro" type="button" value="Modo Claro">
             </nav>
         </header>
         <main>
             <section class="contenedor-seccion" id="divSecciones">
                 <div  class="contenedorTexto1">
-                    <p  id="textoArriba">
+                    <p class="textosP" id="textoArriba">
                         top texto
                     </p>
                 </div>
@@ -60,20 +45,21 @@
                     <img  id="imagenMeme" src="" alt="">
                 </div>
                 <div class="contenedorTexto2">
-                    <p id="textoAbajo">
+                    <p  class="textosP" id="textoAbajo">
                         botton text
                     </p>
                 </div>
             </section>
-            <button class="boton-descarga" id="descargarMeme">
-                Descargar meme
-            </button>
+
+            <input  class="boton-descarga" id="descargarMeme"  type="button" value="Descargar Meme">
+                
         </main>
     </section>
+
+
     <aside class="aside-contenedor" id="divAside">
-        <button  id="botonCierre1">
-            X
-        </button>
+        <input type="button" value="X" id="botonCierre1">
+
         <section class="seccion-imagen" id="opcionesImagen">
             <h2 class="h2-aside">
                 IMAGEN
@@ -87,8 +73,8 @@
     <label id="colorFondo"> FONDO</label>
     <input class="inputFondoColor" type="color">
 
-    <select id="selectFondo">
-        <option value="unset">Ninguno</option>
+    <select id="selectFondo"> 
+        <option value="unset"> Ninguno </option>
         <option value="lighten"> Aclarar</option>
         <option value="darken">Oscurecer</option>
         <option value="difference">Diferenciar</option>
@@ -118,7 +104,7 @@
                 <input type="range" class="range" id="sepia" value="sepia" min="0%" max="100%" step="1%">
 
                 <label class="label-range"> HUE </label>
-                <input type="range" class="range" id="hue" value="hue-rotation" min="0deg" max="359deg" step="1deg">
+                <input type="range" class="range" id="hue" value="hue-rotate" min="0deg" max="359deg" step="1deg">
 
                 <label class="label-range">Saturado</label>
                 <input type="range" class="range" id="saturado" value="saturate" min="100%" max="1000%" step="10%">
@@ -135,9 +121,8 @@
     <!-- SECCION DE TEXTOOO ------------------------>
 
     <section class="seccion-texto" id="divTexto">
-        <button id="botonCierre2">
-            X
-        </button>
+        <input type="button" value="X" id="botonCierre2">
+
         <h2 class="h2-texto">
             Texto
         </h2>
@@ -173,19 +158,16 @@
                 <option value="Roboto Mono, serif" id="robotoMono">Roboto Mono </option>
                 <option value="Righteous, serif" id="righteous"> Righteous </option>
             </select>
-            <input class="tamaño-fuente" type="number" min="5" max="18">
 
+            <input class="tamaño-fuente" type="number" min="18" max="40" value="18">
 
             <div class="iconosAlineacion">
-                <button>
-                    <i id="aIzquierda" class="fi fi-br-align-left"></i>
-                </button>
-                <button>
-                    <i id="aCentro" class="fi fi-br-align-center"></i>
-                </button>
-                <button>
-                    <i id="aDerecha" class="fi fi-br-symbol"></i>
-                </button>
+
+            
+                <button type="button" id="aIzquierda"><i class="fi fi-br-align-left"></i></button>
+
+                <button type="button" id="aCentro"><i class="fi fi-br-align-center"></i></button>
+                <button type="button" id="aDerecha"><i  class="fi fi-br-symbol"></i></button>
             </div>
         </div>
 <!-- 

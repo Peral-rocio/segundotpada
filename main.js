@@ -177,7 +177,6 @@ function restablecervalores (){
 
   $inputSepia.value = "0" 
 
-
   $inputSaturado.value = "0" 
 
   $inputNegativo.value  ="0" 
@@ -358,57 +357,16 @@ $checkTransparente.addEventListener("click", () => {
 
  const $inputEspaciado = $("#inputNumber")
 
+ $inputEspaciado.addEventListener("input", () => {
+  $divTextoTop.style.padding = `${$inputEspaciado.value}px 10px`;
+  $divInferior.style.padding = `${$inputEspaciado.value}px 10px`;
+ })
+
  //interlineado
   const $inputinterlineado = $(".select-interlineado")
 
+  $inputinterlineado.addEventListener("input", () =>{
+    $textoArriba.style.lineHeight= `${$inputinterlineado.value}`;
+    $textoAbajo.style.lineHeight= `${$inputinterlineado.value}`;
+   })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//restablecer filtros
-
-//function restablecerFiltros (){
-  // aca debo poner como inicia cada uno ejemplo: 
-  // el brillo.value = 1 
-//}
-
-//luego aca tengo que colocar como ejecuta la funcion es decir
-// restablecerfiltros ()
-
-//luego al boton de restablecer le ponemos un escuchador
-// boton.addevenlistener ( click , () => { 
-  // resteablecer filtros ( o puede ir arriba en la funcion directamente para no repetir funcion sobre fduncion) 
-  //})

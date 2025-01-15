@@ -534,9 +534,6 @@ main{
 /* .............................MEDIAS QUERYS ................................*/
  @media (min-width: 768px ){
 
- 
-
-
     /* aside seccion */
 
     .aside-contenedor{
@@ -682,5 +679,131 @@ main{
 .select-interlineado{
     width: 700px;
  }
-
  }
+
+@media (min-width: 1024px){
+
+    .divCentral{
+        width: 95%;
+        height: 80%;
+    } 
+
+    #imagenMeme{
+        width: 80%;
+        height: 80%;
+    }
+      /* aside seccion */
+
+      .aside-contenedor{
+        height: 700px;
+    }    
+
+    #botonCierre1{
+        margin: 10px 0px 0px 900px;
+    }
+    
+    .h2-aside{
+        font-size: 35px;
+    }
+    
+#urlInput{
+    width: 95%;
+}
+
+.divColorFondo{
+    margin-top: 20px ;
+}
+
+
+#colorFondo{
+    width: 100%;
+}
+
+.inputFondoColor{
+    width: 250px;
+    height: 30px;
+  }
+  
+#selectFondo{
+    width: 250px;
+    height: 30px;
+}
+
+.contenedor-filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+ }
+
+ .range{
+    width: 95%;
+    height: 3px;
+    margin:  6px;
+    border-radius: 5px;
+}
+
+ 
+.boton-restablecer{
+    width: 300px;
+    font-size: 18px;
+}
+
+.boton-restablecer:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+/* seccion texto */
+
+#botonCierre2{
+    margin: 15px 0px 0px 900px;
+}
+
+.h2-texto{
+    font-size: 35px;
+}
+
+.div-toptext{
+    margin-bottom: 25px;
+}
+
+.textarea{
+    width: 95%;  
+    height: 30px;
+}
+
+
+.div-fuente{
+    margin-top: 30px;
+}
+
+.clases-fuente{
+    width: 96%;
+}
+
+
+.div-colores{
+    width: 52%;
+    margin-bottom: 10px;
+}
+
+#inputColor{
+    width: 100px;
+}
+
+.parrafo-contorno{
+    width: 100%;
+    text-align: start;
+}
+
+#inputNumber{
+    width: 95%;
+} 
+
+.select-interlineado{
+    width: 95%;
+ }
+ }
+
+ /* fin de medias querys */

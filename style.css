@@ -534,6 +534,28 @@ main{
 /* .............................MEDIAS QUERYS ................................*/
  @media (min-width: 768px ){
 
+    .botonNav{
+        width: 180px;
+        height: 35px;
+        font-size: 16px;
+}
+.boton-descarga{
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.divCentral{
+    width: 80%;
+    height: 80%;
+} 
+
+#imagenMeme{
+    width: 98%;
+    height: 98%;
+}
+
+
     /* aside seccion */
 
     .aside-contenedor{
@@ -682,6 +704,19 @@ main{
  }
 
 @media (min-width: 1024px){
+    
+    .botonNav{
+            width: 200px;
+            height: 40px;
+            margin: 3px; 
+            font-size: 20px;
+            text-align: center;
+    }
+
+    .contenedorCentral{
+        width: 100vw;
+        height: 700px;
+    }
 
     .divCentral{
         width: 95%;
@@ -690,7 +725,7 @@ main{
 
     #imagenMeme{
         width: 80%;
-        height: 80%;
+        height: 98%;
     }
       /* aside seccion */
 
@@ -804,6 +839,12 @@ main{
 .select-interlineado{
     width: 95%;
  }
+
+ .boton-descarga{
+    width: 300px;
+    height: 35px;
+    font-size: 25px;
+}
  }
 
  /* fin de medias querys */

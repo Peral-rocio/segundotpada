@@ -17,16 +17,17 @@ const $botonModos = $("#bModos")
 const $modoClaro = $(".modoClaro")
 const $modoOscuro = $(".modoOscuro")
 
-$botonModos.addEventListener ("Click", () => {
+$botonModos.addEventListener ("click", () => {
   if ($body.classList.contains("modoClaro")){
     $body.classList.remove("modoClaro");
     $body.classList.add("modoOscuro");   
-}else {
-  $body.classList.add("modoOscuro");
-  $body.classList.remove("modo oscuro");
-  $body.classList.add ("modoClaro")
+} else {
+  $body.classList.contains("modoOscuro");
+  $body.classList.remove ("modoOscuro");
+  $body.classList.add("modoClaro");
 }
 })
+
 
 //BOTON DE IMAGEN
 
@@ -68,6 +69,10 @@ $cierreTexto.addEventListener("click", () => {
 
 
 //boton de descarga:
+
+//domtoimage.toBlob($card).then((blob) => {
+  // saveAs(blob, ".png");
+//});
  
 
 //SECCION IMAGEN:

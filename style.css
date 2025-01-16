@@ -5,6 +5,7 @@ body .modoClaro {
     background-color: white;
     color: black;
 }
+
 .modoOscuro{
     margin: 0px;
     padding: 0px;
@@ -31,7 +32,6 @@ body .modoClaro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.452);
 }
 
 

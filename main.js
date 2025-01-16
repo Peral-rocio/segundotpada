@@ -1,4 +1,4 @@
-//AQUI VA EL WINDOWS ONLOAD
+window.onload = () =>{
 
 //AQUI COMIENZA EL ATRAPADO DE ELEMENTS
 function $(elements) {
@@ -70,10 +70,19 @@ $cierreTexto.addEventListener("click", () => {
 
 //boton de descarga:
 
-//domtoimage.toBlob($card).then((blob) => {
-  // saveAs(blob, ".png");
-//});
- 
+const $divSecciones = $("#divSecciones")
+
+const $descargaMeme = $(".boton-descarga")
+
+//$descargaMeme.addEventListener("click", () => {
+  // domtoimage.toBlob($divSecciones).then((blob) => {
+   //saveAs(blob, "mi-meme.png");
+   //console.log ($descargaMeme)
+// });
+//})
+
+
+  
 
 //SECCION IMAGEN:
 
@@ -112,49 +121,47 @@ $inputFiltrosFondo.addEventListener("input", () => {
 const $inputBrillo = $("#brillo")
 
 $inputBrillo.addEventListener ("input", () => {
-  const aux = $imagenMeme.style.filter
-  $imagenMeme.style.filter = `brightness (${$inputBrillo.value})`;
+  $divCentral.style.filter = `brightness(${$inputBrillo.value})`;
 })
 
 const $inputOpacidad = $("#opacidad")
 
 $inputOpacidad.addEventListener ( "input", () => {
-  const aux = $imagenMeme.style.filter
-  $imagenMeme.style.filter = `opacity (${$inputOpacidad.value})`
+  $divCentral.style.filter = `opacity(${$inputOpacidad.value})`
 })
 
 const $inputContraste = $ ("#contraste")
 
 $inputContraste.addEventListener ("input", () => {
-  $imagenMeme.style.filter = `contrast (${$inputContraste.value}%)`
+  $divCentral.style.filter = `contrast(${$inputContraste.value})`
 })
 
-
 const $inputDesenfoque = $("#desenfoque")
+
 $inputDesenfoque.addEventListener ( "input", () => {
-  $imagenMeme.style.filter = `blur (${$inputDesenfoque.value}px)`
+  $divCentral.style.filter = `blur(${$inputDesenfoque.value})`
 })
 
 const $inputEscalaDeGrises = $("#escalaDeGrises")
 
 $inputEscalaDeGrises.addEventListener ( "input", ()=> {
-  $imagenMeme.style.filter = `grayscale (${$inputEscalaDeGrises.value}%)`
+  $divCentral.style.filter = `grayscale(${$inputEscalaDeGrises.value})`
 })
 
 const $inputSepia = $ ("#sepia")
 
 $inputSepia.addEventListener ("input" , () => {
-  $imagenMeme.style.filter = ` sepia (${$inputSepia.value}%)`
+  $divCentral.style.filter = `sepia(${$inputSepia.value})`
 })
 
 const $inputSaturado = $("#saturado")
 $inputSaturado.addEventListener ("input" , () => {
-$imagenMeme.style.filter = `saturate (${$inputSaturado.value}%)`
+$divCentral.style.filter = `saturate(${$inputSaturado.value})`
 })
 
 const $inputNegativo = $("#negativo")
 $inputNegativo.addEventListener ("input" , () => {
-$imagenMeme.style.filter = `invert (${$inputNegativo.value})`
+$divCentral.style.filter = `invert(${$inputNegativo.value})`
 })
 
 // restablecer valores boton --------------------------------------
@@ -375,3 +382,5 @@ $checkTransparente.addEventListener("click", () => {
     $textoAbajo.style.lineHeight= `${$inputinterlineado.value}`;
    })
 
+   
+  }

@@ -1,22 +1,66 @@
 window.onload = () =>{
 
-//AQUI COMIENZA EL ATRAPADO DE ELEMENTS
+//                                  AQUI COMIENZA EL ATRAPADO DE ELEMENTS
+
 function $(elements) {
    return document.querySelector (elements)
 }
-// AQUI COMIENZA EL TP
+
+//                                     AQUI COMIENZAN LAS CONST 
+const $body = $ ("body")
+const $botonModos = $("#bModos")
+const $modoClaro = $(".modoClaro")
+const $modoOscuro = $(".modoOscuro")
+const $botonimg = $ ("#botonimagen")
+const $divimg = $("#divAside")
+const $cierreImagen = $("#botonCierre1")
+const $botonTexto = $("#botontexto")
+const $divTexto = $ ("#divTexto")
+const $cierreTexto = $("#botonCierre2")
+const $descargaMeme = $(".boton-descarga")
+const $url = $ ("#urlInput")
+const $imagenMeme = $ ("#imagenMeme")
+const $inputColorFondoImg = $ (".inputFondoColor")
+const $divCentral = $(".divCentral")
+const $inputFiltrosFondo = $("#selectFondo")
+const $inputBrillo = $("#brillo")
+const $inputOpacidad = $("#opacidad")
+const $inputContraste = $ ("#contraste")
+const $inputDesenfoque = $("#desenfoque")
+const $inputEscalaDeGrises = $("#escalaDeGrises")
+const $inputSepia = $ ("#sepia")
+const $inputSaturado = $("#saturado")
+const $inputNegativo = $("#negativo")
+const $textoArriba = $("#textoArriba")
+const $inputTextTop =$("#textareaDiv")
+const $checkTexto = $ ("#checkTexto")
+const $divTextoTop = $ (".contenedorTexto1")
+const $textoAbajo = $("#textoAbajo")
+const $inputTextButtom = $("#textareaButtom")  
+const $checkInferior = $("#checkTextoInferior")
+const $divInferior = $(".contenedorTexto2")
+const $fuenteDeLetras= $(".clases-fuente")
+const $tamañoFuente = $(".tamaño-fuente")
+const $izquierda = $("#aIzquierda")
+const $centro = $("#aCentro")
+const $derecha = $("#aDerecha")
+const $inputColorLetra = $("#inputColor")
+const $textosMeme = $(".contenedor-seccion")
+const $colorDeFondo = $("#inputFondo")
+const $checkTransparente = $ ("#checkColorFondo")
+const $ninguno = $("#botonContorno1")
+const $claro= $("#botonContorno2")
+const $oscuro = $("#botonContorno3")
+const $inputEspaciado = $("#inputNumber")
+const $inputinterlineado = $(".select-interlineado")
+
+//                                           AQUI COMIENZAN LOS EVENTOS 
 
 //SECCION DE HEADER
 
 //BOTONES :
 
-//MODO CLARO-MODO OSCURO
-
-const $body = $ ("body")
-const $botonModos = $("#bModos")
-const $modoClaro = $(".modoClaro")
-const $modoOscuro = $(".modoOscuro")
-
+//BOTON MODO CLARO-MODO OSCURO
 $botonModos.addEventListener ("click", () => {
   if ($body.classList.contains("modoClaro")){
     $body.classList.remove("modoClaro");
@@ -28,49 +72,30 @@ $botonModos.addEventListener ("click", () => {
 }
 })
 
-
-//BOTON DE IMAGEN
-
-const $botonimg = $ ("#botonimagen")
-const $divimg = $("#divAside")
-
-
+//BOTON DE IMAGEN- HEADER
 $botonimg.addEventListener("click", () => {
 $divimg.style.display = "flex";
 })
 
 
 //boton de cierre imagen:
-
-const $cierreImagen = $("#botonCierre1")
-
 $cierreImagen.addEventListener("click", () => { 
   $divimg.style.display = "none"
 }) 
 
 
-//BOTON TEXTO
-
-const $botonTexto = $("#botontexto")
-const $divTexto = $ ("#divTexto")
-
+//BOTON DE TEXTO- HEADER
 $botonTexto.addEventListener("click", () => {
   $divTexto.style.display = "flex";
 })
 
 //boton de cierre texto:
-
-const $cierreTexto = $("#botonCierre2")
-
 $cierreTexto.addEventListener("click", () => {
   $divTexto.style.display = "none";
 })
 
 
-
 //boton de descarga:
-const $descargaMeme = $(".boton-descarga")
-  
 $descargaMeme.addEventListener("click", () => {
   domtoimage.toBlob($textosMeme).then((blob) => {
     saveAs(blob, "mi-meme.png");
@@ -78,87 +103,201 @@ $descargaMeme.addEventListener("click", () => {
 })
 
 
-//SECCION IMAGEN:
+//ASIDE-IMAGEN:
 
-//imagen del usuario :
-
-const $url = $ ("#urlInput")
-const $imagenMeme = $ ("#imagenMeme")
-
+//imagen URL donde el usuario coloca su img:
 $url.addEventListener( "input", () => {
   if ($imagenMeme.src = " " ){
   $imagenMeme.src = $url.value;
 }
 } )
 
-
-//fondo color
-
-const $inputColorFondoImg = $ (".inputFondoColor")
-const $divCentral = $(".divCentral")
-
-
+//FONDO DE COLOR DE LA SECCION CENTRAL 
 $inputColorFondoImg.addEventListener ("input" , () => {
   $divCentral.style.backgroundColor = $inputColorFondoImg.value
 } )
 
-// fondo select
-
-const $inputFiltrosFondo = $("#selectFondo") 
-
+// SECCION FONDO, SELECTOR DE FILTROS 
 $inputFiltrosFondo.addEventListener("input", () => {
   $imagenMeme.style.backgroundImage = `backgroundBlenMode ${$inputFiltrosFondo.value}`
 })
 
-//FILTROOOOOOS -----------------------------------------------------
+// SECCION DE FILTROOOOOOS 
 
-const $inputBrillo = $("#brillo")
-
+//BRILLO
 $inputBrillo.addEventListener ("input", () => {
   $divCentral.style.filter = `brightness(${$inputBrillo.value})`;
 })
 
-const $inputOpacidad = $("#opacidad")
-
+//OPACIDAD
 $inputOpacidad.addEventListener ( "input", () => {
   $divCentral.style.filter = `opacity(${$inputOpacidad.value})`
 })
 
-const $inputContraste = $ ("#contraste")
-
+//CONTRASTE
 $inputContraste.addEventListener ("input", () => {
   $divCentral.style.filter = `contrast(${$inputContraste.value})`
 })
 
-const $inputDesenfoque = $("#desenfoque")
-
+//DESENFOQUE
 $inputDesenfoque.addEventListener ( "input", () => {
   $divCentral.style.filter = `blur(${$inputDesenfoque.value})`
 })
 
-const $inputEscalaDeGrises = $("#escalaDeGrises")
-
+//ESCALA DE GRISES
 $inputEscalaDeGrises.addEventListener ( "input", ()=> {
   $divCentral.style.filter = `grayscale(${$inputEscalaDeGrises.value})`
 })
 
-const $inputSepia = $ ("#sepia")
-
+//SEPIA
 $inputSepia.addEventListener ("input" , () => {
   $divCentral.style.filter = `sepia(${$inputSepia.value})`
 })
 
-const $inputSaturado = $("#saturado")
+//SATURACION
 $inputSaturado.addEventListener ("input" , () => {
 $divCentral.style.filter = `saturate(${$inputSaturado.value})`
 })
 
-const $inputNegativo = $("#negativo")
+//NEGATIVO
 $inputNegativo.addEventListener ("input" , () => {
 $divCentral.style.filter = `invert(${$inputNegativo.value})`
 })
 
-// restablecer valores boton --------------------------------------
+
+//SECCION TEXTO:
+
+//ESCRIBIR EN EL texto superior:
+$inputTextTop.addEventListener("input", () =>{ 
+  $textoArriba.innerText = $inputTextTop.value 
+})
+
+// INPUT DEL CHEK  SUPERIOR 
+$checkTexto.addEventListener("input", () => {
+ if ($divTextoTop.style.display = "flex") {
+  $divTextoTop.style.display = "none"
+} 
+} )
+
+// ESCRIBIR EN EL texto inferior:
+$inputTextButtom.addEventListener ("input" , () => {
+  $textoAbajo.innerText = $inputTextButtom.value
+})
+
+//INPUT DEL CHECK INFERIOR
+$checkInferior.addEventListener ("input" , () => {
+  $divInferior.style.display = "none"
+})
+
+//FUENTES
+//TIPOGRAFIA
+$fuenteDeLetras.addEventListener ( "input" , () => {
+  $textoArriba.style.fontFamily = $fuenteDeLetras.value
+  $textoAbajo.style.fontFamily = $fuenteDeLetras.value
+} )
+
+//tamaño de fuente:
+$tamañoFuente.addEventListener ("input", () => {
+  $textoArriba.style.fontSize = $tamañoFuente.value + "px";
+  $textoAbajo.style.fontSize = $tamañoFuente.value +"px"; 
+})
+
+//ALINEACION 
+//IZQUIERDA 
+$izquierda.addEventListener("click", () =>{
+ if ($divTextoTop.style.justifyContent = "center"){
+  $divTextoTop.style.justifyContent = "start";
+ }
+})
+
+$izquierda.addEventListener("click", () =>{
+  if ($divInferior.style.justifyContent = "center"){
+   $divInferior.style.justifyContent = "start";
+  }
+ })
+
+ //CENTRO
+ $centro.addEventListener ("click", () => {
+  $divTextoTop.style.justifyContent = "center";
+ })
+
+ $centro.addEventListener ("click", () => {
+  $divInferior.style.justifyContent = "center";
+ })
+
+ //DERECHA
+ $derecha.addEventListener("click", () => {
+  if ($divTextoTop.style.justifyContent = "center"){
+    $divTextoTop.style.justifyContent = "end";
+   }
+ })
+
+ $derecha.addEventListener("click", () => {
+  if ($divInferior.style.justifyContent = "center"){
+    $divInferior.style.justifyContent = "end";
+   }
+
+ })
+
+//COLOR DE LETRAS
+$inputColorLetra.addEventListener ("input" , () => {
+$textosMeme.style.color = $inputColorLetra.value
+})
+
+//COLOR FONDO DEL DIV DE LAS LETRAS 
+$colorDeFondo.addEventListener("input", () => {
+  $divTextoTop.style.backgroundColor = $colorDeFondo.value
+  $divInferior.style.backgroundColor = $colorDeFondo.value
+}
+)
+
+//CHECK DE FONDO TRANSPARENTE
+$checkTransparente.addEventListener("click", () => {
+  if ($divTextoTop.style.backgroundColor = "") {
+    $divTextoTop.style.backgroundColor = `rgba (0,0,0,0)`;
+  }
+  })
+
+$checkTransparente.addEventListener("click", () => {
+  if ($divInferior.style.backgroundColor = "") {
+    $divInferior.style.backgroundColor = `rgba (0,0,0,0)`;
+  }
+  })
+
+//CONTORNO DE LAS LETRAS 
+//NINGUNO
+  $ninguno.addEventListener("click", () => {
+    $textoArriba.style.textShadow = "" ;
+    $textoAbajo.style.textShadow= "" ;
+  })
+
+//CLARO
+  $claro.addEventListener("click", () => {
+      $textoArriba.style.textShadow= "2px 2px 5px white";
+      $textoAbajo.style.textShadow = "2px 2px 5px white";
+  })
+
+//OSCURO
+  $oscuro.addEventListener("click", () => {
+     $textoArriba.style.textShadow= "2px 2px 5px black";
+     $textoAbajo.style.textShadow= "2px 2px 5px black";
+  })
+
+//ESPACIADO
+ $inputEspaciado.addEventListener("input", () => {
+  $divTextoTop.style.padding = `${$inputEspaciado.value}px 10px`;
+  $divInferior.style.padding = `${$inputEspaciado.value}px 10px`;
+ })
+
+ //INTERLINEADO
+  $inputinterlineado.addEventListener("input", () =>{
+    $textoArriba.style.lineHeight= `${$inputinterlineado.value}`;
+    $textoAbajo.style.lineHeight= `${$inputinterlineado.value}`;
+   })
+
+//---------------------------------------FUNCION RESTABLECER 
+
+// restablecer valores boton
 const $restablecervalores1 = $(".boton-restablecer")
 
 function restablecervalores (){
@@ -181,7 +320,7 @@ function restablecervalores (){
 
   $inputEscalaDeGrises.value= "0" 
 
-  $inputSepia.value = "0" 
+  $inputSepia.value = "0%" 
 
   $inputSaturado.value = "0" 
 
@@ -192,189 +331,4 @@ restablecervalores()
 
 $restablecervalores1.addEventListener("click", restablecervalores)
 
-
-//SECCION TEXTO:
-
-//texto superior:
-
-const $textoArriba = $("#textoArriba")
-const $inputTextTop =$("#textareaDiv")
-
-$inputTextTop.addEventListener("input", () =>{ 
-  $textoArriba.innerText = $inputTextTop.value 
-})
-
-// INPUT DEL CHEK  SUPERIOR 
-const $checkTexto = $ ("#checkTexto")
-const $divTextoTop = $ (".contenedorTexto1")
-
-$checkTexto.addEventListener("input", () => {
- if ($divTextoTop.style.display = "flex") {
-  $divTextoTop.style.display = "none"
-} 
-} )
-
-//texto inferior:
-
-const $textoAbajo = $("#textoAbajo")
-const $inputTextButtom = $("#textareaButtom")  
-
-
-$inputTextButtom.addEventListener ("input" , () => {
-  $textoAbajo.innerText = $inputTextButtom.value
-})
-
-//INPUT DEL CHECK INFERIOR
-
-const $checkInferior = $("#checkTextoInferior")
-const $divInferior = $(".contenedorTexto2")
-
-$checkInferior.addEventListener ("input" , () => {
-  $divInferior.style.display = "none"
-})
-
-
-//FUENTE
- 
-const $fuenteDeLetras= $(".clases-fuente")
-
-$fuenteDeLetras.addEventListener ( "input" , () => {
-  $textoArriba.style.fontFamily = $fuenteDeLetras.value
-  $textoAbajo.style.fontFamily = $fuenteDeLetras.value
-} )
-
-//tamaño de fuente:
-
-const $tamañoFuente = $(".tamaño-fuente")
-
-$tamañoFuente.addEventListener ("input", () => {
-  $textoArriba.style.fontSize = $tamañoFuente.value + "px";
-  $textoAbajo.style.fontSize = $tamañoFuente.value +"px"; 
-})
-
-//ALINEACION 
-
-//IZQUIERDA 
-
-const $izquierda = $("#aIzquierda")
-
-$izquierda.addEventListener("click", () =>{
- if ($divTextoTop.style.justifyContent = "center"){
-  $divTextoTop.style.justifyContent = "start";
- }
-})
-
-$izquierda.addEventListener("click", () =>{
-  if ($divInferior.style.justifyContent = "center"){
-   $divInferior.style.justifyContent = "start";
-  }
- })
-
- //CENTRO
-
- const $centro = $("#aCentro")
-
- $centro.addEventListener ("click", () => {
-  $divTextoTop.style.justifyContent = "center";
- })
-
- $centro.addEventListener ("click", () => {
-  $divInferior.style.justifyContent = "center";
- })
-
- //DERECHA
-
- const $derecha = $("#aDerecha")
-
- $derecha.addEventListener("click", () => {
-  if ($divTextoTop.style.justifyContent = "center"){
-    $divTextoTop.style.justifyContent = "end";
-   }
- })
-
- $derecha.addEventListener("click", () => {
-  if ($divInferior.style.justifyContent = "center"){
-    $divInferior.style.justifyContent = "end";
-   }
-
- })
-
-
-//COLOR DE LETRAS
-
-const $inputColorLetra = $("#inputColor")
-const $textosMeme = $(".contenedor-seccion")
-
-$inputColorLetra.addEventListener ("input" , () => {
-$textosMeme.style.color = $inputColorLetra.value
-})
-
-//FONDO DE LETRAS 
-
-const $colorDeFondo = $("#inputFondo")
-const $fondoTextos = $ ("#contenedorTextos")
-
-$colorDeFondo.addEventListener("input", () => {
-  $divTextoTop.style.backgroundColor = $colorDeFondo.value
-  $divInferior.style.backgroundColor = $colorDeFondo.value
 }
-)
-
-//CHECK DE FONDO TRANSPARENTE
- 
-const $checkTransparente = $ ("#checkColorFondo")
-
-$checkTransparente.addEventListener("click", () => {
-  if ($divTextoTop.style.backgroundColor = "") {
-    $divTextoTop.style.backgroundColor = `rgba (0,0,0,0)`;
-  }
-  })
-
-$checkTransparente.addEventListener("click", () => {
-  if ($divInferior.style.backgroundColor = "") {
-    $divInferior.style.backgroundColor = `rgba (0,0,0,0)`;
-  }
-  })
-
-  //Contorno de las letras
-
-  const $ninguno = $("#botonContorno1")
-
-  $ninguno.addEventListener("click", () => {
-    $textoArriba.style.textShadow = "" ;
-    $textoAbajo.style.textShadow= "" ;
-  })
-
-  const $claro= $("#botonContorno2")
-
-  $claro.addEventListener("click", () => {
-      $textoArriba.style.textShadow= "2px 2px 5px white";
-      $textoAbajo.style.textShadow = "2px 2px 5px white";
-  })
-
-  const $oscuro = $("#botonContorno3")
-
-  $oscuro.addEventListener("click", () => {
-     $textoArriba.style.textShadow= "2px 2px 5px black";
-     $textoAbajo.style.textShadow= "2px 2px 5px black";
-  })
-
-  //Espaciado 
-
- const $inputEspaciado = $("#inputNumber")
-
- $inputEspaciado.addEventListener("input", () => {
-  $divTextoTop.style.padding = `${$inputEspaciado.value}px 10px`;
-  $divInferior.style.padding = `${$inputEspaciado.value}px 10px`;
- })
-
- //interlineado
-  const $inputinterlineado = $(".select-interlineado")
-
-  $inputinterlineado.addEventListener("input", () =>{
-    $textoArriba.style.lineHeight= `${$inputinterlineado.value}`;
-    $textoAbajo.style.lineHeight= `${$inputinterlineado.value}`;
-   })
-
-
-  }

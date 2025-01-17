@@ -69,20 +69,14 @@ $cierreTexto.addEventListener("click", () => {
 
 
 //boton de descarga:
-
-const $divSecciones = $("#divSecciones")
-
 const $descargaMeme = $(".boton-descarga")
-
-//$descargaMeme.addEventListener("click", () => {
-  // domtoimage.toBlob($divSecciones).then((blob) => {
-   //saveAs(blob, "mi-meme.png");
-   //console.log ($descargaMeme)
-// });
-//})
-
-
   
+$descargaMeme.addEventListener("click", () => {
+  domtoimage.toBlob($textosMeme).then((blob) => {
+    saveAs(blob, "mi-meme.png");
+  })
+})
+
 
 //SECCION IMAGEN:
 
@@ -382,5 +376,5 @@ $checkTransparente.addEventListener("click", () => {
     $textoAbajo.style.lineHeight= `${$inputinterlineado.value}`;
    })
 
-   
+
   }

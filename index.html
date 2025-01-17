@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous">
+        </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,18 +18,22 @@
         rel="stylesheet">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playwrite+AU+SA:wght@100..400&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playwrite+AU+SA:wght@100..400&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
+    
     <title> Entrega Trabajo 2 JS</title>
 </head>
 
 <body class="modoClaro">
+    <!-------------------- CONTENEDOR CENTRAL ----------------------->
     <section class="contenedorCentral" id="divCentral">
         <header id="divHeader">
             <h1 class="h1Section" id="h1Titulo">
@@ -38,60 +41,62 @@
             </h1>
             <nav id="navBotones">
                 <input class="botonNav" id="botonimagen" type="button" value="Imagen">
-                <input  class="botonNav"  id="botontexto"  type="button" value="Texto">
+                <input class="botonNav" id="botontexto" type="button" value="Texto">
                 <input class="botonNav" id="bModos" type="button" value="Modo Claro">
             </nav>
         </header>
         <main>
-            <section class="contenedor-seccion" id="divSecciones">
-                <div  class="contenedorTexto1">
+            <section class="contenedor-seccion">
+                <div class="contenedorTexto1">
                     <p class="textosP" id="textoArriba">
                         top texto
                     </p>
                 </div>
                 <div class="divCentral">
-                    <img  id="imagenMeme" src="" alt="">
+                    <img id="imagenMeme" src="" alt="">
                 </div>
                 <div class="contenedorTexto2">
-                    <p  class="textosP" id="textoAbajo">
+                    <p class="textosP" id="textoAbajo">
                         botton text
                     </p>
                 </div>
             </section>
-
             <button class="boton-descarga">
                 Descargar Meme
             </button>
         </main>
     </section>
 
+    <!----------------- CONTENEDOR ASIDE-IMAGEN ----------------------->
 
     <aside class="aside-contenedor" id="divAside">
+        <!-- BOTON CIERRE -->
         <input type="button" value="X" id="botonCierre1">
 
         <section class="seccion-imagen" id="opcionesImagen">
             <h2 class="h2-aside">
                 IMAGEN
             </h2>
+            <!------------------------ URL -->
             <div class="divUrl">
                 <label>Url</label>
                 <input id="urlInput" type="url">
             </div>
-
-<div class=" divColorFondo">
-    <label id="colorFondo"> FONDO</label>
-    <input class="inputFondoColor" type="color">
-
-    <select id="selectFondo"> 
-        <option value="unset"> Ninguno </option>
-        <option value="lighten"> Aclarar</option>
-        <option value="darken">Oscurecer</option>
-        <option value="difference">Diferenciar</option>
-        <option value="luminosity"> Luminosidad</option>
-        <option value="multiply"> Multiplicar</option>
-    </select>
-</div>
-
+            <!-- ---------------------COLOR DE FONDO  -->
+            <div class=" divColorFondo">
+                <label id="colorFondo"> FONDO</label>
+                <input class="inputFondoColor" type="color">
+                <!------------------------ FILTOS SELECT  -->
+                <select id="selectFondo">
+                    <option value="unset"> Ninguno </option>
+                    <option value="lighten"> Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferenciar</option>
+                    <option value="luminosity"> Luminosidad</option>
+                    <option value="multiply"> Multiplicar</option>
+                </select>
+            </div>
+            <!-------------------------- FILTROS IMAGEN  -->
             <div class="contenedor-filtros" id="divFiltros">
                 <p> FILTROS </p>
                 <label class="label-range"> Brillo</label>
@@ -104,7 +109,7 @@
                 <input type="range" class="range" id="contraste" value="contrast" min="100%" max="1000%" step="1%">
 
                 <label class="label-range"> Desenfoque</label>
-                <input type="range"class="range" id="desenfoque" value="blur" min="0px" max="10px" step="0.1px">
+                <input type="range" class="range" id="desenfoque" value="blur" min="0px" max="10px" step="0.1px">
 
                 <label class="label-range">Escala de grises</label>
                 <input type="range" class="range" id="escalaDeGrises" value="grayscale" min="0%" max="100%" step="1%">
@@ -118,20 +123,21 @@
                 <label class="label-range"> Negativo </label>
                 <input type="range" class="range" id="negativo" value="invert" min="0" max="1" step="0.1">
             </div>
+            <!---------------------- BOTON RESTABLECER VALORES -->
             <button class="boton-restablecer">
                 Restablecer Valores
             </button>
         </section>
     </aside>
 
-    <!-- SECCION DE TEXTOOO ------------------------>
-
+    <!-----------------------------------------SECCION DE TEXTOOO ------------------------>
     <section class="seccion-texto" id="divTexto">
+        <!---------------------- BOTON DE CIERRE -->
         <input type="button" value="X" id="botonCierre2">
-
         <h2 class="h2-texto">
             Texto
         </h2>
+        <!---------------------- CONTENDOR DE TEXTOS E IMAGEN -->
         <div class="div-toptext" id="topText">
             <p class="p-superior">
                 SUPERIOR
@@ -139,46 +145,45 @@
             <textarea class="textarea" id="textareaDiv">
                 TOP TEXT
             </textarea>
+
             <input id="checkTexto" type="checkbox">
             <label> Sin texto superior</label>
         </div>
-
         <div class="div-topbuttom" id="buttomText">
-        <p class="p-inferior">
-            INFERIOR
-        </p>
-        <textarea class="textarea" id="textareaButtom">
-            BUTTON TEXT
-        </textarea>
-        <input id="checkTextoInferior" type="checkbox">
-        <label> Sin texto Inferior</label>
-    </div>
+            <p class="p-inferior">
+                INFERIOR
+            </p>
+            <textarea class="textarea" id="textareaButtom">
+                 BUTTON TEXT
+            </textarea>
 
+            <input id="checkTextoInferior" type="checkbox">
+            <label> Sin texto Inferior</label>
+        </div>
+        <!-------------------------- FUENTES ------>
         <div class="div-fuente" id="divFuentes">
             <p class="parrafo-fuente-titulo">
                 FUENTE
             </p>
+        <!------------------------- CLASES DE FUENTES  -->
             <select class="clases-fuente">
                 <option value="DM Serif Text, serif" id="dmSherifText">DM Serif text</option>
                 <option value="Playwrite AU SA, serif" id="australia">Playwrite Australia</option>
                 <option value="Roboto Mono, serif" id="robotoMono">Roboto Mono </option>
                 <option value="Righteous, serif" id="righteous"> Righteous </option>
             </select>
-
+        <!-------------------------- TAMAÑO DE FUENTE  -->
             <input class="tamaño-fuente" type="number" min="18" max="40" value="18">
 
+        <!--------------------------- ALINEACION TEXTOS -->
             <div class="iconosAlineacion">
-
-            
                 <button type="button" id="aIzquierda"><i class="fi fi-br-align-left"></i></button>
-
                 <button type="button" id="aCentro"><i class="fi fi-br-align-center"></i></button>
-                <button type="button" id="aDerecha"><i  class="fi fi-br-symbol"></i></button>
+                <button type="button" id="aDerecha"><i class="fi fi-br-symbol"></i></button>
             </div>
         </div>
-<!-- 
-      CONTENEDOR COLOR  -----------------------------   -->
 
+        <!--------------------------------CONTENEDOR COLOR  -----------------------------   -->
         <div class="contenedor-color" id="seccionColor">
             <div class="div-colores" id="divColores">
                 <p class="parrafo-color-titulo">
@@ -186,7 +191,6 @@
                 </p>
                 <input id="inputColor" type="color">
             </div>
-
             <div class="div-fondo" id="divFondo">
                 <p class="parrafo-fondo-titulo">
                     FONDO
@@ -197,7 +201,7 @@
             <input id="checkColorFondo" type="checkbox">
             <label> fondo transparente</label>
         </div>
-
+        <!---------------------- CONTENEDOR CONTORNO---------------------------------->
         <div class="contenedor-contorno" id="divContorno">
             <p class="parrafo-contorno">
                 CONTORNO
@@ -207,15 +211,12 @@
             <button type="button" class="botones-contorno" id="botonContorno3">Oscuro</button>
         </div>
 
-        <!-- espaciado -->
-
+        <!------------------------ CONTENEDOR ESPACIADO----------------------------->
         <div class="contenedor-espaciado" id="divEspaciado">
             <label id="espaciado"> ESPACIADO</label>
             <input id="inputNumber" type="number" value="10" min="10px" max="40px">
         </div>
-
-        <!-- interlineado  -->
-
+        <!------------------------ CONTENEDOR INTERLINEADO--------------------------->
         <div class="contenedor-interlineado" id="divInterlineado">
             <p class="parrafo-interlineado">
                 INTERLINEADO
@@ -230,7 +231,6 @@
             </select>
         </div>
     </section>
-
 
     <script src="./main.js"></script>
 </body>
